@@ -1,337 +1,186 @@
-# Dev Portfolio
+<p align="center">
+  <a href="https://getbootstrap.com/">
+    <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width=72 height=72>
+  </a>
 
-This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
+  <h3 align="center">Bootstrap</h3>
 
-To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+  <p align="center">
+    Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+    <br>
+    <a href="https://getbootstrap.com/docs/4.1/"><strong>Explore Bootstrap docs »</strong></a>
+    <br>
+    <br>
+    <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">Report bug</a>
+    ·
+    <a href="https://github.com/twbs/bootstrap/issues/new?template=feature.md&labels=feature">Request feature</a>
+    ·
+    <a href="https://themes.getbootstrap.com/">Themes</a>
+    ·
+    <a href="https://blog.getbootstrap.com/">Blog</a>
+  </p>
+</p>
 
-## Features
 
-* Gulp ready (compiles Sass and minifies JS)
-* Sass ready with lots of commenting
-* Fully responsive
-* Comes with Bootstrap grid system
-* Easy colour changes can be done through simple variable edits
+## Table of contents
 
-## Contents
+- [Quick start](#quick-start)
+- [Status](#status)
+- [What's included](#whats-included)
+- [Bugs and feature requests](#bugs-and-feature-requests)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Community](#community)
+- [Versioning](#versioning)
+- [Creators](#creators)
+- [Thanks](#thanks)
+- [Copyright and license](#copyright-and-license)
 
-- [Setup and Configuration](#setup-and-configuration)
-    - [Making Edits / Customizing the Template](#making-edits--customizing-the-template)
-    - [Using the Template As Is](#using-the-template-as-is)
-- [Customization and Editing](#customization-and-editing)
-    - [General](#general)
-    - [Images](#images)
-    - [Header Section](#header-section)
-    - [Lead Section](#lead-section)
-    - [About Section](#about-section)
-    - [Experience Section](#experience-section)
-    - [Education Section](#education-section)
-    - [Projects Section](#projects-section)
-    - [Skills Section](#skills-section)
-    - [Contact Section](#contact-section)
-    - [Footer Section](#footer-section)
-    - [Optional Sections](#optional-sections)
-- [Changelog](#changelog)
-- [License](#license)
 
-## Setup and Configuration
+## Quick start
 
-The setup required can be broken into two types:
-1. If you want to make edits or customize the template
-2. If you just want to add your information as use as is
+Several quick start options are available:
 
-### Making Edits / Customizing the Template
+- [Download the latest release.](https://github.com/twbs/bootstrap/archive/v4.1.3.zip)
+- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
+- Install with [npm](https://www.npmjs.com/): `npm install bootstrap`
+- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.1.3`
+- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.1.3`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
-To setup, simply fork the repo and run `npm install` in order to get all the Gulp dev dependencies. Next, run `Gulp watch` to compile the Sass and minify the JavaScript. Alternatively, if you don't have Gulp installed globally, you can run the npm script `npm run watch`. Any changes done to the JavaScript (js/scripts.js) or Sass (sass/styles.scss) will be autocompiled and ready to go.
+Read the [Getting started page](https://getbootstrap.com/docs/4.1/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
-All scripts are within `js/scripts.js` and get minified to `js/scripts.min.js`. All styles are in `sass/styles.scss` and get compiled to `css/styles.css`. Both the minified scripts file and compiled CSS file are what is loaded on the page by default.
 
-At this point, the page is ready to go and you can begin to add your own information and make any needed changes. The sections below  contains a quick breakdown of each of the default sections and how they work.
+## Status
 
-### Using The Template As Is
+[![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com/)
+[![Build Status](https://img.shields.io/travis/twbs/bootstrap/v4-dev.svg)](https://travis-ci.org/twbs/bootstrap)
+[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
+[![Gem version](https://img.shields.io/gem/v/bootstrap.svg)](https://rubygems.org/gems/bootstrap)
+[![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue.svg)](https://atmospherejs.com/twbs/bootstrap)
+[![Packagist Prerelease](https://img.shields.io/packagist/vpre/twbs/bootstrap.svg)](https://packagist.org/packages/twbs/bootstrap)
+[![NuGet](https://img.shields.io/nuget/vpre/bootstrap.svg)](https://www.nuget.org/packages/bootstrap/absoluteLatest)
+[![peerDependencies Status](https://img.shields.io/david/peer/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap?type=peer)
+[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap?type=dev)
+[![Coverage Status](https://img.shields.io/coveralls/github/twbs/bootstrap/v4-dev.svg)](https://coveralls.io/github/twbs/bootstrap?branch=v4-dev)
+[![CSS gzip size](https://img.badgesize.io/twbs/bootstrap/v4-dev/dist/css/bootstrap.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/twbs/bootstrap/tree/v4-dev/dist/css/bootstrap.min.css)
+[![JS gzip size](https://img.badgesize.io/twbs/bootstrap/v4-dev/dist/js/bootstrap.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/twbs/bootstrap/tree/v4-dev/dist/js/bootstrap.min.js)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)](https://www.browserstack.com/automate/public-build/SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)
 
-If you wish to use the template as is (i.e. how it's seen in the demo), then all that's required is the `css`, `images`, `js`, `libs` folders and the `index.html` file. You would then add your content to `index.html` as needed and you're good to go!
 
-## Customization and Editing
+## What's included
 
-### General
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
-In general, most styles on the page are based off the definitions of variables in the variable section of the style sheet:
-
-```SCSS
-// Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
-
-// Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
-
-// Define border colors
-$border: #dcd9d9;
-
-// Define text colors
-$heading: #374054;
-$text: #74808a;
+```text
+bootstrap/
+└── dist/
+    ├── css/
+    │   ├── bootstrap-grid.css
+    │   ├── bootstrap-grid.css.map
+    │   ├── bootstrap-grid.min.css
+    │   ├── bootstrap-grid.min.css.map
+    │   ├── bootstrap-reboot.css
+    │   ├── bootstrap-reboot.css.map
+    │   ├── bootstrap-reboot.min.css
+    │   ├── bootstrap-reboot.min.css.map
+    │   ├── bootstrap.css
+    │   ├── bootstrap.css.map
+    │   ├── bootstrap.min.css
+    │   └── bootstrap.min.css.map
+    └── js/
+        ├── bootstrap.bundle.js
+        ├── bootstrap.bundle.js.map
+        ├── bootstrap.bundle.min.js
+        ├── bootstrap.bundle.min.js.map
+        ├── bootstrap.js
+        ├── bootstrap.js.map
+        ├── bootstrap.min.js
+        └── bootstrap.min.js.map
 ```
 
-If you wish to change the general colour scheme of the page for example, simply change the value of `$base-color`.
+We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
 
-There is also a number of default CSS classes that can be applied such as `.shadow`, `.shadow-large`, `.btn-rounded-white`, and various others. These can be found under the General Styles section in the style sheet.
 
-### Images
+## Bugs and feature requests
 
-By default, the template comes with a number of images, some of which can be kept and others which act simply as placeholders and should be switched. The template contains the following:
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
 
-* Main background (images/lead-bg.jpg) - this is the main background image provided via [Unsplash](https://unsplash.com/). This can be kept or changed easily by replacing `images/lead-bg.jpg` with your new background (recommended size of at least 1920x1080).
-* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main bg, this can kept or changed easily by replacing the `favicon.ico` with your new one.
-* Project image - these are the images associated with the projects under the project section. These are simply placeholders and should either be replaced or removed.
 
-### Header Section
+## Documentation
 
-The header section can be found within the `<header>` tag and simply contains an unordered list of anchors to different sections of the page. If you add a new section and want to be able to quickly navigate to it from the top, simply add another list element with an anchor that has the href of the ID of the section. Conversely, if you remove a section, don't forget to remove the associated navigation element.
+Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://getbootstrap.com/>. The docs may also be run locally.
 
-If you wish to add a header link to an external page, simply add the class `no-scroll` to the anchor. For example:
+Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/docs/4.1/assets/js/src/search.js` file.
 
-```HTML
-<li>
-    <a href="https://google.com" class="no-scroll">Google</a>
-</li>
-```
+### Running documentation locally
 
-If you wish to have a sticky (fixed) header, you simply need to add a class of `sticky` to the main header. For example, that would be accomplished as follows:
+1. Run through the [tooling setup](https://getbootstrap.com/docs/4.1/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+2. Run `npm install` to install Node.js dependencies.
+3. Run `npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
+4. Open `http://localhost:9001` in your browser, and voilà.
 
-```HTML
-<header class="sticky">
-    <!-- Header content -->
-</header>
-```
+Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/).
 
-### Lead Section
+### Documentation for previous releases
 
-The Lead section is pretty straightforward, it contains an h1 for your name and an h2 for your title. It also contains a link that can be used to link to your resume should you wish to add it as well.
+- For v2.3.2: <https://getbootstrap.com/2.3.2/>
+- For v3.3.x: <https://getbootstrap.com/docs/3.3/>
+- For v4.0.x: <https://getbootstrap.com/docs/4.0/>
 
-If you want your resume to automatically download when the button is clicked instead of opening up in another tab (the default behaviour), add the following code (Thanks to jkfran for the suggestion) in the lead:
+[Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.
 
-```HTML
-<a href="path/to/resume.pdf" download="resume.pdf" class="btn-rounded-white">Download Resume</a>
-```
 
-The href attribute points to where your resume is stored and the download attribute is what triggers the download / provides the name the file will be downloaded as when the user clicks the button (In this case, it will download as resume.pdf).
+## Contributing
 
-### About Section
+Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
-The about section contains a quick about blurb that can be edited by changing the text within the paragraph tags.
+Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/twbs/bootstrap/tree/master/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
-### Experience Section
+Editor preferences are available in the [editor config](https://github.com/twbs/bootstrap/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
-The experience section creates a vertical timeline with all your relevant experience. The code for the timeline creation can be found within `js/scripts.js` and is an adaptaion of [RyanFitzgerald/vertical-timeline](https://github.com/RyanFitzgerald/vertical-timeline).
 
-The default format is as follows:
+## Community
 
-```HTML
-<div id="experience-timeline">
-    <div data-date="September 2015 – September 2016">
-        <h3>Employer Name</h3>
-        <h4>Job Title</h4>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-    </div>
-</div>
-```
-
-The data attribute `data-date` is what is used to add a date to the associated timeline point. All that is really required is a wrapping div (i.e. `#experience-timeline`) and nested divs to build the timeline. The h3, h4, and p tags are option and the contents of the div can be styled however you wish.
+Get updates on Bootstrap's development and chat with the project maintainers and community members.
 
-To add additional section, simply add additional nested divs under the main wrapping div.
+- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
+- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
+- Join [the official Slack room](https://bootstrap-slack.herokuapp.com/).
+- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
+- Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
+- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
 
-### Education Section
 
-The Education is just a series of `.education-block` classes with some details associated with them. By default, it shows school name, date, degree, and some additional details. For example:
+## Versioning
 
-```HTML
-<div class="education-block">
-    <h3>University of Ottawa</h3>
-    <span class="education-date">Sept 2016 - Sept 2017</span>
-    <h4>Bachelor of Science in Computer Science</h4>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-    </p>
-</div>
-```
+For transparency into our release cycle and in striving to maintain backward compatibility, Bootstrap is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
 
-To add additional section, simply add additional `.education-block` elements.
+See [the Releases section of our GitHub project](https://github.com/twbs/bootstrap/releases) for changelogs for each release version of Bootstrap. Release announcement posts on [the official Bootstrap blog](https://blog.getbootstrap.com/) contain summaries of the most noteworthy changes made in each release.
 
-### Projects Section
 
-The Project section contains a number of `.project` elements that represent each of your projects. By default, it contains a 300x300 image under `.project-image` and relevant project information under `.project-info`. An example is as follows:
+## Creators
 
-```HTML
-<div class="project">
-    <div class="project-image">
-        <img src="images/project.jpg" />
-    </div>
-    <!-- End .project-image -->
+**Mark Otto**
 
-    <div class="project-info">
-        <h3>Project Name Here</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-        <a href="#">View Project</a>
-    </div>
-    <!-- End .project-info -->
-</div>
-```
-
-If you want to hide some projects by default, you can throw them in an additional row and add the markup for the "Show More" button. This would be done as follows:
-
-```HTML
-<!-- Projects Above -->
-
-<a id="view-more-projects" href="#">View More Projects</a>
-<div id="more-projects" class="row">
-    <div class="project shadow-large">
-        <div class="project-image">
-            <img src="images/project.jpg" />
-        </div>
-        <!-- End .project-image -->
-        <div class="project-info">
-            <h3>Project Name Here</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
-            <a href="#">View Project</a>
-        </div>
-        <!-- End .project-info -->
-    </div>
-    <!-- End .project -->
-</div>
-```
-
-This will add a link that says "View More Projects" under the current projects and when clicked, all projects in the "More-projects" div will be shown. This is optional functionality and isn't provided by default. It is important that you keep the wrapping div ID intact ("#more-projects") as well as the anchor ID ("#view-more-projects"), however the contents of the div and the anchor text itself can be edited however you like.
-
-#### Projects without images
-
-If you do not wish to have a project image associated with a project, you can simply add `no-image` as an additional class to the project. It would look like the following:
-
-```HTML
-<div class="project no-image">
-    <div class="project-info">
-        <h3>Project Name Here</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-        <a href="#">View Project</a>
-    </div>
-    <!-- End .project-info -->
-</div>
-```
-
-### Skills Section
-
-The Skills section is simply an unordered list that spits out a "Skill Cloud" with all the skills listed. To add / remove skills, simply edit or add list elements, like so:
-
-```HTML
-<ul>
-    <li>JavaScript</li>
-    <li>Python</li>
-    <li>Ruby</li>
-    <li>Go</li>
-    <li>Node.js</li>
-</ul>
-```
-
-### Contact Section
-
-Since the page is static, I opted to use the awesome Formspree to allow for a contact form without the need for anything else. To use it, you must have the page hosted on a server (loading a basic HTML page won't work) where a referrer header is generated. Also, simply add the email to the action. An example is as follows:
-
-```HTML
-<form method="POST" action="https://formspree.io/email@email.com">
-    <input type="hidden" name="_subject" value="Contact request from personal website" />
-    <input type="email" name="_replyto" placeholder="Your email" required>
-    <textarea name="message" placeholder="Your message" required></textarea>
-    <button type="submit">Send</button>
-</form>
-```
-For more information on configuration of the contact form or dealing with errors, check out [Formspree](https://formspree.io/).
-
-For a quick tutorial about formspree, check out this [tutsplus tutorial](https://webdesign.tutsplus.com/tutorials/quick-tip-add-a-formspree-form-to-your-static-sites--cms-23870) that covers different aspects and features of the form tool.
-
-### Footer Section
-
-The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains Github, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
-
-### Optional Sections
-
-The template comes with an optional section that can be added to the page markup to list things like Certifications, Hobbies, and more (Note: these are not included by default). The markup for the additional optional section is as follows:
-
-```HTML
-<div class="optional-section background-alt">
-    <h2 class="heading">Section Name</h2>
-
-    <div class="optional-section-block">
-        <h3>Some content title</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-        </p>
-        <ul>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-        </ul>
-    </div>
-    <!-- End .optional-section-block -->
-
-</div>
-<!-- End .optional-section -->
-```
-
-You can copy .optional-section-block for each new item you wish you have in the optional section. Also, the background-alt class may need to be removed depending on where the optional section is placed in your layout as this adds the grey background. If you play it at the bottom after "Skills", it can be used as is. Also, by default the border is applied at the top, but this can also be adjusted as needed.
-
-The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
-
-## Changelog
-
-### 1.2.1
-
-* Updated dependencies and gulpfile
-* Added `no-image` optional class for projects without images (see above for usage)
-
-### 1.2.0
-
-* Added support for optional "Show More Projects" that hides some projects by default if included
-* Added optional sections to display certifications, languages, etc.
-
-### 1.1.3
-
-* Added default favicon to be used or changed
-* Added `sticky` class to make header fixed
-* Updated docs to add image section
-
-### 1.1.2
-
-* Added `no-scroll` class option to header navigation anchor if you want to link to external site
-* Changed contact form input / textarea colours to be based off `$base-color`
-* Changed main background to 100vh so it doesn't overflow if viewport height < 700px
-
-### 1.1.1
-
-* Made input placeholder text more readable
-* Removed timeline line when no JS
-* Added some basic styling to timeline when no JS
-
-### 1.1.0
-
-* Fixed menu toggle on mobile devices
-* Fixed z-index / scrolling issue with mobile menu
-* Mobile menu now closes once a nav element is hit
-
-## License
-
-Completely free (MIT)! See [LICENSE.md](LICENSE.md) for more.
+- <https://twitter.com/mdo>
+- <https://github.com/mdo>
+
+**Jacob Thornton**
+
+- <https://twitter.com/fat>
+- <https://github.com/fat>
+
+
+## Thanks
+
+<a href="https://www.browserstack.com/">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="490" height="106">
+</a>
+
+Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
+
+
+## Copyright and license
+
+Code and documentation copyright 2011-2018 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
