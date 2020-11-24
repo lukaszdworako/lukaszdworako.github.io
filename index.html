@@ -21,6 +21,7 @@
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
   </head>
 
@@ -42,31 +43,31 @@
             <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <div class="container-fluid p-0">
-
+      <hr class="m-0">
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
           <h1 class="mb-0">Lukasz
             <span class="text-primary">Dworakowski</span>
           </h1>
-          <div class="subheading mb-5">Greater Toronto Area · (289) 400-6545 ·
-            <a href="mailto:lukasz.dworakowski@utoronto.ca">lukasz.dworakowski@utoronto.ca</a>
-          </div>
-          <p class="lead mb-5">Summary about me: Other people’s code makes computer go beep boop beep when it should go beep boop boop, I write the codes to fix it, and make the computer make more beeps and boops in specific orders. I also teach how to make computer beep and boop. </p>
+          <div class="subheading mb-5"><a href="https://github.com/lukaszdworako/lukaszdworako.github.io/raw/master/Awesome_CV.pdf">Resume</a> ·
+            Greater Toronto Area · (289) 400-6545 ·
+            <a href="mailto:lukasz.dworakowski@utoronto.ca">lukasz.dworakowski@utoronto.ca</a></div>
+          <p class="lead mb-5">About me: Other people’s code makes computer go beep boop beep when it should go beep boop boop, I write the codes to fix it, and make the computer make more beeps and boops in specific orders. I also teach how to make computer beep and boop. </p>
           <p class="lead mb-5">Hello! My name is Lukasz Dworakowski (as you can probably tell from me pasting it all over the place), and I am currently a student at the University of Toronto Mississauga studying Computer Science, Mathematics, and GIS.
-            My current passions and interests are: Investigation into how we can teach students best, and deliver information in a understandable manor; High performance computing, both the hardware (I like seeing expensive servers haha) and software components; Distributed systems is a major area of interest I would like to learn about; Encryption and privacy are major areas of interest, as we all deserve our privacy and safety when online and storing files!</p>
+            My current passions and interests are: I'm currently extremely interested in the field of Information Security, from both the offensive and defensive perspective. Our everyday lives are dictated by information we trust to companies, and bits in a computer, we should strive to make the most secure systems we can, before we end up in a data leak! My other interests include High Performance Computing (haha 2 socket * 128 thread + 4 GPU Machine go BRRRR); How best to approach teaching computer science to new comers, and how to ensure the content is delivered in a understandable manor; Systems programming overall is a very interesting field, as it presents many challenges not present in other layers, and as such is a challenge I would like to approach head on!</p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/lukaszdworako/">
               <i class="fab fa-linkedin-in"></i>
@@ -77,18 +78,38 @@
           </div>
         </div>
       </section>
-
       <hr class="m-0">
-
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
           <h2 class="mb-5">Experience</h2>
          
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
+              <h3 class="mb-0">Backend Developer</h3>
+              <div class="subheading mb-3">UofTea</div>
+              <p>Currently a work in progress, but using the NERD stack, I helped to lead development on the backend of this new and exciting application. I primarily focused on making clean, concise, and easy to use APIs for the front end to hook into, as well as trying to optimize our database querying to dynamodb to be as fast as possible.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">September 2020 - December 2020</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
               <h3 class="mb-0">Software Developer</h3>
-              <div class="subheading mb-3">AMD</div>
-              <p>Perform triage and debugging of Windows Kernel mode drivers using Windbg, debug GPU using internal tools.Lead development on task to improve debug-ability and understanding of critical issues in driver when deployed to cloud service providercustomers.Setup, and debug servers for GPU virtualization using the AMD Radeon MI25 platform.Lead in the development of a new automated test suite for virtualized GPU environments, including security attacks and normal use cases.</p>
+              <div class="subheading mb-3">UTM Department of Mathematics and Computational Sciences; <a href="https://mcs.utm.utoronto.ca/~pcrs/pcrs/">PCRS</a></div>
+              <p>Using a django backend, I designed and created a new method in the <a href="https://mcs.utm.utoronto.ca/~pcrs/pcrs/">PCRS</a> system for students to have a more friendly way of learning loop invariants in their introductory computational theory course. This was done by custom tailoring an existing library called <a href="https://js-parsons.github.io/">Parsons js</a>, which presents an easy way to have a friendly coding environment similar to lego building blocks. The end goal achieved a secure transfer of information from the front end to backend to allow for only backend mark verification, implementing both direct match and running submitted code using instructor designed testcases. This all was achieved through adding in the new component to the existing django infrastructure and code base, allowing me to learn how to best approach the problem of integrating into a design touched by many people.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">May 2020 - August 2020</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Software Developer PEY</h3>
+              <div class="subheading mb-3">AMD; GPU Virtualization</div>
+              <p>Perform triage and debugging of Windows Kernel mode drivers using Windbg, debug GPU using internal tools. Lead development on task to improve debug-ability and understanding of critical issues in driver when deployed to cloud service providercustomers. Setup, and debug servers for GPU virtualization using the AMD Radeon MI25 platform. Lead in the development of a new automated test suite for virtualized GPU environments, including security attacks and normal use cases.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">May 2019 - August 2020</span>
@@ -99,7 +120,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Lead Software Developer</h3>
               <div class="subheading mb-3">Memeorable</div>
-              <p>Setup, and maintain backend infrastructure for rapid deployment using cloud services.Create and maintain efficient RESTful APIs for an easily maintainable, quick and responsive backend.Organize and facilitate weekly scrum meetings with team, make design decisions.</p>
+              <p>Setup, and maintain backend infrastructure for rapid deployment using cloud services. Create and maintain efficient RESTful APIs for an easily maintainable, quick and responsive backend. Organize and facilitate weekly scrum meetings with team, make design decisions.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">January 2019 - April 2019</span>
@@ -110,7 +131,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Teaching Assistant</h3>
               <div class="subheading mb-3">University of Toronto Mississauga: MCS</div>
-              <p>TA for CSC209 Software Tools and Systems Programming - C, bash, make.TA for CSC369 Operating Systems - Linux based OS concepts, EX. synchronization, scheduling, ext2 file system.Running labs, answer questions students may have pertaining to assignments, mark all course evaluations.</p>
+              <p>TA for CSC209 Software Tools and Systems Programming - C, bash, make. TA for CSC369 Operating Systems - Linux based OS concepts, EX. synchronization, scheduling, ext2 file system. Running labs, answer questions students may have pertaining to assignments, mark all course evaluations.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">January 2019 - Present</span>
@@ -153,64 +174,6 @@
         </div>
 
       </section>
-
-      <hr class="m-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">University of Toronto Mississauga</h3>
-              <div class="subheading mb-3">Bachelor of Science</div>
-              <div>Computer Science, Mathematics, Geographic Information Systems (GIS)</div>
-              <p>I am currently attending the University of Toronto Mississauga, and am pursuing a degree in the fields of Computer Science, Mathematics, and Statistics. I have taken various courses, including but not limited to:</p>
-              Completed courses:
-              <dl>
-                <dt>CSC108</dt>
-                <dd>Introduction to Computer Programming</dd>
-                <dt>CSC148</dt>
-                <dd>Introduction to Computer Science</dd>
-                <dt>CSC207</dt>
-                <dd>Software Design</dd>
-                <dt>CSC209</dt>
-                <dd>Software tools and Systems Programming</dd>
-                <dt>CSC258</dt>
-                <dd>Computer Organization</dd>
-                <dt>MAT135</dt>
-                <dd>Calculus</dd>
-                <dt>MAT223/224</dt>
-                <dd>Linear Algebra I/ II</dd>
-                <dt>MAT232</dt>
-                <dd>Multivariable Calculus</dd>
-                <dt>STA107</dt>
-                <dd>Introduction to Probability and Modeling</dd>
-                <dt>CSC236</dt>
-                <dd>Introduction to the Theory of Computation</dd>
-                <dt>CSC369</dt>
-                <dd>Operating Systems</dd>
-                <dt>GGR272</dt>
-                <dd>Digital Mapping and Principles of Cartography</dd>
-                <dt>CSC263</dt>
-                <dd>Data Structures and Analysis</dd>
-                <dt>CSC343</dt>
-                <dd>Introduction to Databases</dd>
-                <dt>CSC301</dt>
-                <dd>Introduction to Software Engineering</dd>
-                <dt>GGR276</dt>
-                <dd>Quantitative Methods I in Geography</dd>
-                <dt>GGR278</dt>
-                <dd>Geographical Information Systems</dd>
-              </dl>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2016 - Present</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <hr class="m-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
@@ -220,22 +183,13 @@
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline dev-icons">
             <li class="list-inline-item">
+              <i class="fab fa-node"></i>
+            </li>
+            <li class="list-inline-item">
               <i class="fab fa-python"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-linux"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-ubuntu"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-apple"></i>
-            </li>
-            <li class="list-inline-item">
               <i class="fab fa-java"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-windows"></i>
             </li>
             <li class="list-inline-item">
               <i class="fas fa-terminal"></i>
@@ -247,20 +201,31 @@
               <i class="devicon-c-plain"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicon-vim-plain"></i>
-            </li>
-            <li class="list-inline-item">
               <i class="devicon-vuejs-plain"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicon-visualstudio-plain"></i>
             </li>
             <li class="list-inline-item">
               <i class="devicon-git-plain-wordmark"></i>
             </li>
+            <li class="list-inline-item">
+              <i class="fab fa-linux"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="fab fa-apple"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="fab fa-windows"></i>
+            </li>
           </ul>
           <div class="subheading mb-3">The ones without a fancy logo :(</div>
           <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Typescript
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              AWS DynamoDB
+            </li>
             <li>
               <i class="fa-li fa fa-check"></i>
               Windbg
@@ -297,21 +262,74 @@
               Linux Tools</li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
-          </ul>
+              Agile Development &amp; Scrum</li>WORK IN PROGRESS: Please contact for access to github reposositories if you are interested!</p>
         </div>
       </section>
 
       <hr class="m-0">
+      <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
-          <h2 class="mb-5">Projects</h2>
-          <p> WORK IN PROGRESS: Please contact for access to github repos</p>
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">University of Toronto Mississauga</h3>
+              <div class="subheading mb-3">Bachelor of Science</div>
+              <p>I am currently attending the University of Toronto Mississauga, and am pursuing a degree in the fields of Computer Science, Mathematics, and Geographical Information Systems (GIS). I have taken various courses, including but not limited to:</p>
+              Completed courses:
+              <dl>
+                <dt>CSC108</dt>
+                <dd>Introduction to Computer Programming</dd>
+                <dt>CSC148</dt>
+                <dd>Introduction to Computer Science</dd>
+                <dt>CSC207</dt>
+                <dd>Software Design</dd>
+                <dt>CSC209</dt>
+                <dd>Software tools and Systems Programming</dd>
+                <dt>CSC258</dt>
+                <dd>Computer Organization</dd>
+                <dt>MAT135</dt>
+                <dd>Calculus</dd>
+                <dt>MAT223/224</dt>
+                <dd>Linear Algebra I/ II</dd>
+                <dt>MAT232</dt>
+                <dd>Multivariable Calculus</dd>
+                <dt>STA107</dt>
+                <dd>Introduction to Probability and Modeling</dd>
+                <dt>CSC236</dt>
+                <dd>Introduction to the Theory of Computation</dd>
+                <dt>CSC369</dt>
+                <dd>Operating Systems</dd>
+                <dt>GGR272</dt>
+                <dd>Digital Mapping and Principles of Cartography</dd>
+                <dt>CSC263</dt>
+                <dd>Data Structures and Analysis</dd>
+                <dt>CSC343</dt>
+                <dd>Introduction to Databases</dd>
+                <dt>CSC301</dt>
+                <dd>Introduction to Software Engineering</dd>
+                <dt>GGR276</dt>
+                <dd>Quantitative Methods I in Geography</dd>
+                <dt>GGR278</dt>
+                <dd>Geographical Information Systems</dd>
+                <dt>CSC492</dt>
+                <dd>Independent Implementation project with <a href="https://utmandrew.bitbucket.io/">Professor Andrew Petersen</a></dd>
+                <dt>MAT344</dt>
+                <dd>Introduction to Combinatorics</dd>
+                <dt>CSC347</dt>
+                <dd>Introduction to Information Security</dd>
+                <dt>CSC490</dt>
+                <dd>Capstone Design Course; Theme this year being UX and Design</dd>
+              </dl>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">September 2016 - Present</span>
+            </div>
+          </div>
         </div>
       </section>
-
-      <hr class="m-0">
 
     </div>
 
